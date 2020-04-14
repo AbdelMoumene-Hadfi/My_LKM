@@ -22,7 +22,7 @@ static inline void one_wp(void) {
       write_forced_cr0(read_cr0() | 0x10000);
 }
 static int __init init_mod(void) {
-	printk(KERN_EMERG "insmod change_wp");
+  printk(KERN_EMERG "insmod change_wp");
   cr0=read_cr0();
   printk(KERN_EMERG "The value of cr0 before change :%lx\n",cr0);
   zero_wp();
